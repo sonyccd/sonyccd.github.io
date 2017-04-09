@@ -7,6 +7,7 @@ var plumber = require('gulp-plumber');
 var cp = require('child_process');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
+var modernizr = require('gulp-modernizr');
 
 var jekyllCommand = (/^win/.test(process.platform)) ? 'jekyll.bat' : 'jekyll';
 
@@ -59,11 +60,12 @@ gulp.task('imagemin', function() {
 });
 
 /**
- * Compile and minify js
+ * modernize, compile and minify js
  */
 gulp.task('js', function(){
   return gulp.src('src/js/**/*.js')
       .pipe(plumber())
+      .pipe(modernizr())
       .pipe(concat('main.js'))
       .pipe(uglify())
       .pipe(gulp.dest('assets/js/'))
