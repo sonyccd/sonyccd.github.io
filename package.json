@@ -21,7 +21,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.0.0",
-    "snyk": "^1.29.0"
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "gulp-modernizr": "^1.0.0-alpha"
